@@ -1,14 +1,10 @@
 #!/usr/bin/python3
 
-"""
-
-This module define class rectangle
-
-"""
+""" Define a Rectangle class. """
 
 
 class Rectangle:
-    """ Class that defines a rectangle """
+    """ Represents a rectangle. """
 
     def __init__(self, width=0, height=0):
         """ Initialize a new Rectangle.
@@ -18,6 +14,8 @@ class Rectangle:
             height: height of the Rectangle
 
         """
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
