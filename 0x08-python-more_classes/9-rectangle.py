@@ -9,6 +9,7 @@ class Rectangle:
     """ Class that defines a rectangle """
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """ Method that initializes the instance
@@ -119,6 +120,7 @@ class Rectangle:
         Returns:
             str of the rectangle
 
+
         """
 
         rectangle = ""
@@ -127,7 +129,7 @@ class Rectangle:
             return rectangle
 
         for i in range(self.height):
-            rectangle += ("#" * self.width) + "\n"
+            rectangle += (str(self.print_symbol) * self.width) + "\n"
 
         return rectangle[:-1]
 
