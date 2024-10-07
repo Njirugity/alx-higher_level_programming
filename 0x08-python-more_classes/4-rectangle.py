@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 """
-
 This module define class rectangle
 
 """
@@ -18,6 +17,8 @@ class Rectangle:
             height: height of the Rectangle
 
         """
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
