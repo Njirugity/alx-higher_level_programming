@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-
 """ Defines a Rectangle class. """
 
 
 class Rectangle:
-    """ Represent a rectangle """
+    """ Represent a rectangle. """
 
     def __init__(self, width=0, height=0):
         """ Initialize a new Rectangle.
@@ -80,10 +79,9 @@ class Rectangle:
         Returns:
             rectangle area
 
-
         """
 
-        return self.width * self.height
+        return (self.width * self.height)
 
     def perimeter(self):
         """ Method that calculates the Rectangle perimeter
@@ -91,13 +89,12 @@ class Rectangle:
         Returns:
             rectangle perimeter
 
-
         """
 
         if self.width == 0 or self.height == 0:
             return 0
 
-        return (2 * self.width) + (2 * self.height)
+        return ((2 * self.width) + (2 * self.height))
 
     def __str__(self):
         """ Method that returns the Rectangle #
@@ -107,13 +104,12 @@ class Rectangle:
 
         """
 
-        rectangle = ""
-
         if self.width == 0 or self.height == 0:
-            return rectangle
+            return ("")
 
+        rectangle = []
         for i in range(self.height):
-            rectangle += ("#" * self.width) + "\n"
-
-        return rectangle[:-1]
-
+            [rectangle.append('#') for j in range(self.width)]
+            if i != self.height - 1:
+                rectangle.append("\n")
+        return ("".join(rectangle))
