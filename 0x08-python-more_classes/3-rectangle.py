@@ -3,24 +3,27 @@
 
 
 class Rectangle:
-    """ Represent a rectangle. """
+""" Represent a rectangle. """
 
     def __init__(self, width=0, height=0):
-        """ Initialize a new Rectangle.
+        """ Method that initializes the instance
 
         Args:
-            width: width of the Rectangle
-            height: height of the Rectangle
+            width: rectangle width
+            height: rectangle height
 
         """
-	self.width = width
-	self.height = height
+
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
-        """method that return the value of width
+        """ method that returns the value of the width
         Returns:
-            width of the rectangle
+            rectangle width
+
+
         """
 
         return self.__width
@@ -47,8 +50,9 @@ class Rectangle:
     @property
     def height(self):
         """ method that returns the value of the height
+
         Returns:
-            height of the rectangle
+            rectangle height
 
         """
 
@@ -81,7 +85,7 @@ class Rectangle:
 
         """
 
-        return (self.width * self.height)
+        return self.width * self.height
 
     def perimeter(self):
         """ Method that calculates the Rectangle perimeter
@@ -94,7 +98,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
 
-        return ((2 * self.width) + (2 * self.height))
+        return (2 * self.width) + (2 * self.height)
 
     def __str__(self):
         """ Method that returns the Rectangle #
@@ -104,12 +108,12 @@ class Rectangle:
 
         """
 
-        if self.width == 0 or self.height == 0:
-            return ("")
+        rectangle = ""
 
-        rectangle = []
+        if self.width == 0 or self.height == 0:
+            return rectangle
+
         for i in range(self.height):
-            [rectangle.append('#') for j in range(self.width)]
-            if i != self.height - 1:
-                rectangle.append("\n")
-        return ("".join(rectangle))
+            rectangle += ("#" * self.width) + "\n"
+
+        return rectangle[:-1]
