@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 """ Defines if the object is exactly an instance of the specified class. """
 
 
